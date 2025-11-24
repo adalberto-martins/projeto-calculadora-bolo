@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Preços - Dona Bolo</title>
+    <link rel="stylesheet" href="calculadora-style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>Calculadora de Preços - Dona Bolo</h1>
+        <p>Ferramenta interna para garantir o lucro em cada bolo.</p>
+
+        <div class="input-group">
+            <label for="custo-ingredientes">1. Custo dos Ingredientes (R$):</label>
+            <input type="number" id="custo-ingredientes" value="45.00" step="0.01">
+        </div>
+
+        <div class="input-group">
+            <label for="custo-fixo">2. Custo Fixo por Unidade (R$):</label>
+            <input type="number" id="custo-fixo" value="10.00" step="0.01">
+            <small>Ex: Mão de obra, gás, aluguel - estimado por bolo.</small>
+        </div>
+
+        <div class="input-group">
+            <label for="margem-lucro">3. Margem de Lucro Desejada (%):</label>
+            <input type="number" id="margem-lucro" value="30" min="0" max="99">
+            <small>Percentual de lucro que o produto deve gerar sobre o Preço Final de Venda.</small>
+        </div>
+
+        <button id="calcular-btn">Calcular Preço de Venda</button>
+
+        <div class="resultado-box">
+            <h2>Resultado:</h2>
+            <p>Custo Total do Bolo: <span id="custo-total-display">R$ 0,00</span></p>
+            <p>Lucro Desejado: <span id="lucro-desejado-display">0%</span></p>
+            <p class="final-price">Preço de Venda Sugerido: <span id="preco-venda-display">R$ 0,00</span></p>
+        </div>
+    </div>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>
